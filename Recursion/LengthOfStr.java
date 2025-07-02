@@ -24,7 +24,7 @@ public class LengthOfStr {
 
     public static void main(String[] args) {
         String str = "abcde";
-        int len = 0;
+        // int len = 0;
 
         // findLength(str,0,len); ----BruteForce
           int length = findLength(str);      // ---- use no. of calls in stack

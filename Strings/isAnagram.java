@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class isAnagram {
 
-    public static void isAnagram(String s1, String s2) {
+    public static void isStrAnagram(String s1, String s2) {
         String str1 = s1.toLowerCase();
         String str2 = s2.toLowerCase();
 
@@ -32,6 +32,6 @@ public class isAnagram {
         String s1 = "care";
         String s2 = "rce";
 
-        isAnagram(s1, s2);
+        isStrAnagram(s1, s2);
     }
 }

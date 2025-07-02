@@ -24,6 +24,6 @@ public class CountVowel {
         String str = sc.nextLine();
 
         countVowel(str);
-
+        sc.close();
     }
 }
