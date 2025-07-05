@@ -1,3 +1,5 @@
+package Arrays.Array_1D;
+
 public class KadanesAlgo {
 
     public static void SubArrSum(int[] arr) {
