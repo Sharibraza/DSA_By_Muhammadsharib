@@ -9,7 +9,7 @@ public class Linkedlist {
     public static int size = 0; // 5. Size of LL
 
     // blueprint for creating newNodes
-    
+
     class Node {
         int data;
         Node next;
@@ -179,7 +179,7 @@ public class Linkedlist {
 
     }
 
-    // ***10. Find and remove Nth node from End 
+    // ***10. Find and remove Nth node from End
 
     public void delNthFromEnd(int n) {
 
@@ -187,7 +187,7 @@ public class Linkedlist {
         int sz = 0;
         Node temp = head;
         while (temp != null) {
-            temp = temp.next ;
+            temp = temp.next;
             sz++;
         }
 
@@ -199,7 +199,7 @@ public class Linkedlist {
 
         // sz-n
         int i = 1;
-        int iToFind = size - n ;
+        int iToFind = size - n;
         Node prev = head;
         while (i < iToFind) {
             prev = prev.next;
@@ -211,22 +211,22 @@ public class Linkedlist {
 
     // *****11. Find Palindrome in LL
 
-    public Node findMid(Node head){
+    public Node findMid(Node head) {
         Node slow = head;
         Node fast = head;
 
-        //         Even             Odd
-        while ( fast != null && fast.next != null ) {
-             slow =  slow.next;
-             fast = fast.next.next;
+        // Even Odd
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
         return slow; // mid pos
     }
 
-    public boolean checkPalindrome(){
+    public boolean checkPalindrome() {
 
-        if (head == null && head.next == null ) {
+        if (head == null && head.next == null) {
             return true;
         }
 
@@ -235,17 +235,17 @@ public class Linkedlist {
         Node curr = mid;
         Node prev = null;
         Node next;
-        while ( curr != null ) {
+        while (curr != null) {
             next = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = next ;
+            curr = next;
         }
 
-        Node right  = prev;
+        Node right = prev;
         Node left = head;
 
-        while ( right != null) {
+        while (right != null) {
             if (right.data != left.data) {
                 return false;
             }
@@ -262,64 +262,130 @@ public class Linkedlist {
         Node slow = head;
         Node fast = head;
 
-        while ( fast != null && fast.next != null) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
 
-            if ( slow == fast) {
+            if (slow == fast) {
                 return true;
             }
         }
         return false;
     }
 
-    // 13. Remove cycle from LL 
+    // 13. Remove cycle from LL
 
-    public static void removeCycle(){
-        // Detect cycle 
-         Node slow = head;
-         Node fast = head;
-         boolean cycle = false;
+    public static void removeCycle() {
+        // Detect cycle
+        Node slow = head;
+        Node fast = head;
+        boolean cycle = false;
 
-         while ( fast != null && fast.next != null ) {
+        while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
 
-            if ( slow == fast) {
-                 cycle = true;
-                 break;
+            if (slow == fast) {
+                cycle = true;
+                break;
             }
-         }
+        }
 
-         if (cycle == false) {
+        if (cycle == false) {
             return;
-         }
+        }
 
         // Find Meeting position
-         slow = head;
-         Node prev = null;
+        slow = head;
+        Node prev = null;
 
-         while ( slow != fast) {
+        while (slow != fast) {
             prev = fast;
             slow = slow.next;
             fast = fast.next;
-         }
+        }
 
         // remove Cycle
         prev.next = null;
 
     }
 
+    // 14. MergeSort on LL
+
+    private Node getMid(Node head) {
+        Node slow = head;
+        Node fast = head.next;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+
+    private Node merge(Node head1, Node head2) {
+        Node mergedLL = new Node(-1);
+        Node temp = mergedLL;
+
+        while (head1 != null && head2 != null) {
+            if (head1.data <= head2.data) {
+                temp.next = head1;
+                head1 = head1.next;
+                temp = temp.next;
+            } else {
+                temp.next = head2;
+                head2 = head2.next;
+                temp = temp.next;
+            }
+        }
+
+        // for rest of Node
+
+        while (head1 != null) {
+            temp.next = head1;
+            head1 = head1.next;
+            temp = temp.next;
+        }
+
+        while (head2 != null) {
+            temp.next = head2;
+            head2 = head2.next;
+            temp = temp.next;
+        }
+
+        return mergedLL.next;
+    }
+
+    public Node mergeSort(Node head) {
+
+        if ( head == null || head.next == null) {
+            return head;
+        }
+
+        // find mid
+        Node mid = getMid(head);
+
+        Node rightHead = mid.next;
+        mid.next = null;
+
+        // left & right
+        Node newLeft = mergeSort(head);
+        Node newRight = mergeSort(rightHead);
+
+        // merge
+        return merge(newLeft, newRight);
+    }
 
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
-        head = ll.new Node(1);
-        head.next = ll.new Node(2);
-        head.next.next = ll.new Node(3);
-        head.next.next.next = ll.new Node(4);
-        head.next.next.next.next = head.next;    
-        
+        ll.addFirst(1);
+        ll.addFirst(2);
+        ll.addFirst(3);
+        ll.addFirst(4);
+        ll.addFirst(5);
 
+       
 
     }
 }
