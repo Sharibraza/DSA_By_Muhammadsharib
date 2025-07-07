@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.LinkedList;
+
 public class Linkedlist {
 
     public static Node head;
@@ -254,14 +256,70 @@ public class Linkedlist {
         return true;
     }
 
+    // ***12. Floyds cycle finding algo
+
+    public static boolean isCyclic() {
+        Node slow = head;
+        Node fast = head;
+
+        while ( fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if ( slow == fast) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // 13. Remove cycle from LL 
+
+    public static void removeCycle(){
+        // Detect cycle 
+         Node slow = head;
+         Node fast = head;
+         boolean cycle = false;
+
+         while ( fast != null && fast.next != null ) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if ( slow == fast) {
+                 cycle = true;
+                 break;
+            }
+         }
+
+         if (cycle == false) {
+            return;
+         }
+
+        // Find Meeting position
+         slow = head;
+         Node prev = null;
+
+         while ( slow != fast) {
+            prev = fast;
+            slow = slow.next;
+            fast = fast.next;
+         }
+
+        // remove Cycle
+        prev.next = null;
+
+    }
+
 
     public static void main(String[] args) {
         Linkedlist ll = new Linkedlist();
-        ll.addFirst(1);
-        ll.addLast(2);
-        ll.addLast(2);
-        ll.addLast(1);
-        ll.print();
-        System.out.println( ll.checkPalindrome());
+        head = ll.new Node(1);
+        head.next = ll.new Node(2);
+        head.next.next = ll.new Node(3);
+        head.next.next.next = ll.new Node(4);
+        head.next.next.next.next = head.next;    
+        
+
+
     }
 }
