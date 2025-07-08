@@ -1,7 +1,5 @@
 package LinkedList;
 
-import java.util.LinkedList;
-
 public class Linkedlist {
 
     public static Node head;
@@ -419,12 +417,9 @@ public class Linkedlist {
         Linkedlist ll = new Linkedlist();
         ll.addLast(1);
         ll.addLast(2);
-        ll.addLast(3);
-        ll.addLast(4);
-        ll.addLast(5);
-         ll.addLast(6);
+        ll.addLast(2);
+        ll.addLast(1);
         ll.print();
-        ll.zigzagLL();
-        ll.print();
+        System.out.println(ll.checkPalindrome());
     }
 }
