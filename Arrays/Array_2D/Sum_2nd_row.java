@@ -1,3 +1,4 @@
+
 public class Sum_2nd_row {
 
     public static void rowSum(int nums[][]){
