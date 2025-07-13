@@ -45,17 +45,17 @@ public class isPalindromeLL {
                   s.push(slow.data);
                   slow = slow.next;
             }
-
-            while (head != null) {
+            slow = head ;
+            while (slow != null) {
 
                   char ch = s.pop();
-                  if (head.data == ch) {
+                  if (slow.data == ch) {
                         isPalindrome = true;
                   } else {
                         isPalindrome = false;
                         break;
                   }
-                  head = head.next;
+                  slow = slow.next;
             }
 
             return isPalindrome;
