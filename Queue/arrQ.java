@@ -1,6 +1,6 @@
 package Queue;
 
-public class arrQ {
+public class ArrQ {
 
     // Implementing Linear queue using arr( Just for grasping concepts )
 
