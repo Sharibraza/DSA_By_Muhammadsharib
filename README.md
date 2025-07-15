@@ -1,4 +1,4 @@
-# 🚀 DSA Mastery Journey – [Your Name]
+# 🚀 DSA Mastery Journey – [Muhammad sharib]
 
 Welcome to my structured Data Structures and Algorithms (DSA) journey!  
 This repository tracks my learning, notes, and daily problem-solving across various platforms.
@@ -9,9 +9,9 @@ This repository tracks my learning, notes, and daily problem-solving across vari
 
 - [x] Arrays
 - [x] Strings
-- [ ] Linked List
-- [ ] Stack/Queue
-- [ ] Recursion & Backtracking
+- [x] Linked List
+- [x] Stack/Queue
+- [x] Recursion & Backtracking
 - [ ] Trees
 - [ ] Graphs
 - [ ] DP
