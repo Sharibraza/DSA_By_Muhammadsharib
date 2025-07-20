@@ -2,7 +2,7 @@ package Queue;
 
 public class ArrQ {
 
-    // Implementing Linear queue using arr( Just for grasping concepts )
+    // Implementing Linear queue using arr ( Just for grasping concepts )
 
     static class Queue {
 
