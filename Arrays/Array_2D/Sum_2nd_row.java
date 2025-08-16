@@ -1,4 +1,4 @@
-package Arrays.Array_2D;
+// Removed the package declaration to match the directory structure
 
 public class Sum_2nd_row {
 
