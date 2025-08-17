@@ -1,7 +1,5 @@
 package Backtracking;
 
-import java.util.Scanner;
-
 public class N_Queens {
      static int count = 0;
 
@@ -69,7 +67,6 @@ public class N_Queens {
   }
 
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
     int n = 5;
 
     char board[][] = new char[n][n];

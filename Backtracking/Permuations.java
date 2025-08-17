@@ -1,7 +1,5 @@
 package Backtracking;
 
-import java.util.Scanner;
-
 public class Permuations {
       public static void permutation(String str, String ans) {
     
@@ -18,7 +16,6 @@ public class Permuations {
   }
 
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
 
     String str = "abc";
 
