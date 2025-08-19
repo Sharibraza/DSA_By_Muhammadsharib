@@ -1,7 +1,6 @@
 package ArrayList;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class PairSum1 {
     public static boolean pairsum(ArrayList<Integer> arr, int target) {
@@ -27,7 +26,6 @@ public class PairSum1 {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
         ArrayList<Integer> arr = new ArrayList<>();
         arr.add(1);
