@@ -7,6 +7,7 @@ public class Stack_twoQ {
     static class Stack {
         static Queue<Integer> q1 = new LinkedList<>();
         static Queue<Integer> q2 = new LinkedList<>();
+        
         public static boolean isEmpty() {
             return q1.isEmpty() && q2.isEmpty();
         }

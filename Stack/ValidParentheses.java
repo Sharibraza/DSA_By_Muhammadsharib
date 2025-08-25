@@ -17,6 +17,7 @@ public class ValidParentheses {
                 if (s.isEmpty()) { // ")}]" no opening
                     return false;
                 }
+
                 if ((s.peek() == '(' && ch == ')')
                         || (s.peek() == '{' && ch == '}')
                         || (s.peek() == '[' && ch == ']')) {
@@ -26,6 +27,7 @@ public class ValidParentheses {
                 }
             }
         }
+        
         if (s.isEmpty()) {
             return true;
         }

@@ -5,7 +5,8 @@ import java.util.*;
 public class Q_twoStacks {
 
     static class Queue {
-        // push O(n)
+
+       
         static Stack<Integer> s1 = new Stack<>();
         static Stack<Integer> s2 = new Stack<>();
 
@@ -13,6 +14,8 @@ public class Q_twoStacks {
             return s1.isEmpty();
         }
 
+         // 1. push O(n) --------->
+         
         // //add - O(n)
         // public static void add(int data) {
 
@@ -37,7 +40,7 @@ public class Q_twoStacks {
         // return s1.pop();
         // }
 
-        // pop(n)
+        // 2. pop(n) --------->
 
         // add - O(1)
         public static void add(int data) {
