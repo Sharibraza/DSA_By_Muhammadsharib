@@ -47,7 +47,7 @@ public class DelFromBST {
         return root;
     }
 
-    public static Node findInorderSuccessor(Node root){
+    public static Node findInorderSuccessor(Node root){ 
         // agar root hi null huwa to? --> yaha root kabhi null ho hi nahi sakta, bcz ye case hamne upar handle kiya hai (// R->L  rx)
         while ( root.left != null) {
             root = root.left;
