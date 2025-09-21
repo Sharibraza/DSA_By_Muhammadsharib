@@ -19,16 +19,16 @@ public class BTree {
     static class BinaryTree{
         static int idx = -1 ;
 
-        public static Node buildTree(int preOrder[]) {
+        public static Node buildTree(int Nodes[]) {
             idx++;
 
-            if (preOrder[idx] == -1 ) {
+            if (Nodes[idx] == -1 ) {
                 return null;
             }
 
-            Node newNode = new Node(preOrder[idx]);
-            newNode.left = buildTree(preOrder);
-            newNode.right = buildTree(preOrder);
+            Node newNode = new Node(Nodes[idx]);
+            newNode.left = buildTree(Nodes);
+            newNode.right = buildTree(Nodes);
 
             return newNode;
         }
@@ -107,11 +107,12 @@ public class BTree {
         }
 
     }
+    
     public static void main(String[] args) {
-        int preOrder[] = {1,2,-1,-1,3,4,-1,-1,5,-1,-1};
+        int Nodes[] = {1,2,-1,-1,3,4,-1,-1,5,-1,-1};
 
         BinaryTree tree = new BinaryTree();
-        Node root = tree.buildTree(preOrder);
+        Node root = tree.buildTree(Nodes);
         // System.out.println(root);
 
          tree.preOrder(root);
