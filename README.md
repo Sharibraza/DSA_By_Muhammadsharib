@@ -48,18 +48,23 @@ cd DSA_By_Muhammadsharib
 ---
 
 ## Repository structure
-Example layout:
+Current layout:
 ```
 /DSA_By_Muhammadsharib
-├─ /arrays
-├─ /linked_lists
-├─ /trees
-├─ /graphs
-├─ /dynamic_programming
-├─ /sorting
-├─ /problems
-│  ├─ problem-001/
-│  └─ problem-002/
+├─ ArrayList/
+├─ Arrays/
+├─ Backtracking/
+├─ Basic_Math/
+├─ Binary_Trees/
+├─ Greedy_Algorithm/
+├─ Heap/
+├─ LinkedList/
+├─ Queue/
+├─ Recursion/
+├─ Searching_Algorithms/
+├─ Sorting_Algorrithms/
+├─ Stack/
+├─ Strings/
 └─ README.md
 ```
 Each folder contains implementations and a README or notes file explaining usage and complexities.
