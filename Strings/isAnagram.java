@@ -30,7 +30,7 @@ public class isAnagram {
 
     public static void main(String[] args) {
         String s1 = "care";
-        String s2 = "rce";
+        String s2 = "rce"; // race✅  rce❌
 
         isStrAnagram(s1, s2);
     }
