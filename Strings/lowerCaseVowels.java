@@ -1,6 +1,6 @@
 package Strings;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class lowerCaseVowels {
     
@@ -23,5 +23,6 @@ public class lowerCaseVowels {
     String str = sc.next();
 
     System.out.println(isLowerCase(str));
+    sc.close();
   }
 }
