@@ -2,54 +2,71 @@ package Divide_Conquer;
 
 public class MergeArrOfStr {
 
-    public static void mergeSort(String arr[], int s, int e) {
-        
-        if ( s >= e) {
-            return;
+    public static String[] mergeSort(String arr[], int lo, int hi) {
+
+        if (lo == hi ) {
+            String A[] = {arr[lo]};
+            return A;
         }
+      
+        int mid = lo + (hi - lo) / 2;
+        String arr1[] = mergeSort(arr, lo, mid);
+        String arr2[] = mergeSort(arr, mid+1, hi);
 
-        int mid = s + (e-s) /2;
+        String arr3[] = merge(arr1, arr2);
 
-        mergeSort(arr, s, mid);
-        mergeSort(arr, mid+1, e);
-
-        merge(arr, s, mid, e);
+        return arr3;
     }
 
     
-    public static void merge(String arr[], int s, int mid, int e) {
-        String temp[] = new String[e-s+1]; 
-        int i = s ;
-        int j = mid+1;
-        int k =0;
+    public static String[] merge(String arr1[], String arr2[]) {
+       int m = arr1.length;
+       int n = arr2.length;
+       String[] arr3 = new String[m+n];
 
-        while ( i<= mid && j<=e) {
-            char lch[] =  arr[i].toCharArray();
-            char rch[] =  arr[j].toCharArray(); 
-            if (lch[i] < rch[j] ) {
-                temp[k] = arr[i];
+       int idx = 0;
+       int i = 0;
+       int j = 0;
+
+       while ( i < m && j < n) {
+            
+        if( isAlphabaticallySmaller(arr1[i], arr2[j]) ){
+                arr3[idx] = arr1[i];
                 i++;
-            }else{
-                temp[k] = arr[j]; 
-                 j++;
+                idx++;
             }
-            k++;
+            else{
+               arr3[idx] = arr2[j];
+                j++;
+                idx++; 
+            }
+
         }
 
-        while (i <= mid) {
-            temp[k++] = arr[i++];
+        while( i < m){
+                arr3[idx] = arr1[i];
+                i++;
+                idx++;
         }
 
-        while (j <= e) {
-            temp[k++] = arr[j++];
+        while( j < n){
+                arr3[idx] = arr2[j];
+                j++;
+                idx++;
         }
-
-        for (k = 0, i = s; k < temp.length; k++, i++) {
-            arr[i] = temp[k];
-        }
+        
+        return arr3;
     }
 
-      public static void print(String[] arr) {
+        public static boolean isAlphabaticallySmaller(String arr1, String arr2){
+            if( arr1.compareTo(arr2) < 0 ){
+                return true;
+            }
+            return false;
+        }
+
+
+    public static void print(String[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
@@ -58,8 +75,8 @@ public class MergeArrOfStr {
     public static void main(String[] args) {
         String arr[] = { "sun", "earth", "mars", "mercury" };
       
-        mergeSort(arr, 0, arr.length - 1);
+        String a[] = mergeSort(arr, 0, arr.length - 1);
 
-         print(arr);
+        print(a);
     }
 }
