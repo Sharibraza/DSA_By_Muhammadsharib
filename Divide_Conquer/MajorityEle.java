@@ -42,7 +42,7 @@ public class MajorityEle {
 
     // 2. Divide and Conquer
     //Core Logic : The algorithm relies on the intuition that if an element is the majority element of the entire array,
-    //  it must also be the majority element of at least one of its halves (left or right).
+    //  it must  also be the majority element of at least one of its halves (left or right).
 
     public static int countInRange(int nums[], int num, int lo, int hi){
         int count = 0;
