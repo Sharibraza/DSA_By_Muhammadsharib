@@ -56,8 +56,8 @@ public class InversionCount {
 
     public static int mergeSort(int nums[], int left, int right) {
         int invCount = 0;
-
-        if (right > left) {
+                                    //right < left: This would be an invalid range (empty array).
+        if (right > left) {         // This means the current subarray has at least two elements. We can still divide it into smaller halves.
             int mid = (left + right) / 2;
 
             invCount = mergeSort(nums, left, mid);
