@@ -41,6 +41,8 @@ public class MajorityEle {
     // }
 
     // 2. Divide and Conquer
+    //Core Logic : The algorithm relies on the intuition that if an element is the majority element of the entire array,
+    //  it must also be the majority element of at least one of its halves (left or right).
 
     public static int countInRange(int nums[], int num, int lo, int hi){
         int count = 0;
@@ -77,7 +79,7 @@ public class MajorityEle {
 
     public static void main(String[] args) {
 
-        int nums[] = {3,2,3};
+        int nums[] = {3,3,4,3,3};
         // assume that the majority element always exists in the array.
 
         System.out.println("Majority Ele = " + majorityElement(nums));
