@@ -6,7 +6,7 @@ public class Monotonic {
 
     public static boolean isMonotonic(ArrayList<Integer> list){
         boolean inc = true;
-        boolean dec = false;
+        boolean dec = true;
 
         for (int i = 0; i < list.size()-1; i++) {
             if ( list.get(i) > list.get(i+1)) {
