@@ -1,25 +1,32 @@
 package ArrayList;
 
-public class Monotonic {
-    
-    public static void main(String[] args) {
-        int arr[] = {1,9,2,3};
-        
-        boolean ac = true;
-        boolean dc = true;
+import java.util.ArrayList;
 
-        for (int i = 0; i < arr.length-1; i++) {
-            if (arr[i] <= arr[i+1]) {
-                dc = false;
-            }else{
-                ac = false;
+public class Monotonic {
+
+    public static boolean isMonotonic(ArrayList<Integer> list){
+        boolean inc = true;
+        boolean dec = false;
+
+        for (int i = 0; i < list.size()-1; i++) {
+            if ( list.get(i) > list.get(i+1)) {
+                inc = false;
+            }
+            if (list.get(i) < list.get(i+1)) {
+                dec = false;
             }
         }
+        return inc || dec ;
+    }
+    
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);list.add(2); list.add(2); list.add(3); 
         
-        if (ac) {
-            System.out.println("Asc");
+        if (isMonotonic(list)) {
+            System.out.println(list + " List is Monotonic");
         }else{
-            System.out.println("DESC");
+            System.out.println(list + " List is Not Monotonic");
         }
     }
 }
