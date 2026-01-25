@@ -56,6 +56,8 @@ Current layout:
 ├─ Backtracking/
 ├─ Basic_Math/
 ├─ Binary_Trees/
+├─ Bit_Manipulation/
+├─ Divide_Conquer/
 ├─ Greedy_Algorithm/
 ├─ Heap/
 ├─ LinkedList/
