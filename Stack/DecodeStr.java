@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class DecodeStr {
 
-    // Bruteforce : My approach
+    // Bruteforce : My approach ( has many flaws )
     public static StringBuilder decode(String codedMsg){
         Stack<Character> s = new Stack<>();
         StringBuilder code = new StringBuilder();
