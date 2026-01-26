@@ -10,6 +10,8 @@ public class TrappingRainWater {
         int n = height.length;
         int ans = 0;
 
+        // Similar to Next greater logic
+        
         for (int i = 0; i < n; i++) {
             while ((!stack.isEmpty()) && (height[stack.peek()] < height[i])) {
 
