@@ -17,11 +17,11 @@ public class ArrQ {
 
         }
 
-        public static boolean isEmpty() {
+        public static boolean isEmpty() {    // O(1)
             return rear == -1;
         }
 
-        public static void add(int data) {
+        public static void add(int data) {   // O(1)
             if (rear == size - 1) {
                 System.out.println("Queue is full");
                 return;
@@ -31,7 +31,7 @@ public class ArrQ {
             return;
         }
 
-        public static int remove() {
+        public static int remove() {        // O(n)
             if (isEmpty()) {
                 System.out.println("Queue is empty");
                 return -1;
@@ -44,7 +44,7 @@ public class ArrQ {
             return front;
         }
 
-        public static int peek() {
+        public static int peek() {  // // O(1)
             if (isEmpty()) {
                 System.out.println("Queue is empty");
                 return -1;
