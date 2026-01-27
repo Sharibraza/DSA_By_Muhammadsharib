@@ -15,28 +15,28 @@ public class CircularQusingArr {
             front = -1;
         }
 
-        public static boolean isEmpty() {
+        public static boolean isEmpty() {    // O(1)
             return rear == -1 && front == -1;
         }
 
-        public static boolean isFull() {
+        public static boolean isFull() {     // O(1)
             return (rear + 1) % size == front;
         }
 
-        public static void add(int data) {
+        public static void add(int data) {      // O(1)
             if (isFull()) {
                 System.out.println("Queue is full");
                 return;
             }
-            if (front == -1) {
-                front = 0;
+            if (front == -1) {  
+                front = 0;  // First element
             }
             rear = (rear + 1) % size;
             arr[rear] = data;
             return;
         }
 
-        public static int remove() {
+        public static int remove() {     // O(1)
             if (isEmpty()) {
                 System.out.println("Queue is empty");
                 return -1;
@@ -45,7 +45,7 @@ public class CircularQusingArr {
             if (rear == front) {
                 rear = front = -1;
             } else {
-                front = (front + 1) % size;
+                front = (front + 1) % size;    // back to 0
             }
             return result;
         }
