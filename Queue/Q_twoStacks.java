@@ -6,7 +6,6 @@ public class Q_twoStacks {
 
     static class Queue {
 
-       
         static Stack<Integer> s1 = new Stack<>();
         static Stack<Integer> s2 = new Stack<>();
 
@@ -14,48 +13,44 @@ public class Q_twoStacks {
             return s1.isEmpty();
         }
 
-         // 1. push O(n) --------->
-         
-        // //add - O(n)
-        // public static void add(int data) {
-
-        // while (!s1.isEmpty()) {
-        // s2.push(s1.pop());
-        // }
-
-        // s1.push(data);
-
-        // while (!s2.isEmpty()) {
-        // s1.push(s2.pop());
-        // }
-        // }
-        // remove - O(1)
-        // public static int remove() {
-
-        // if (s1.isEmpty()) {
-        // System.out.println("Queue is empty");
-        // return -1;
-        // }
-
-        // return s1.pop();
-        // }
-
-        // 2. pop(n) --------->
-
-        // add - O(1)
+        //  1. push O(n) --------->
+        //add - O(n)
         public static void add(int data) {
-            s2.push(data);
-        }
 
-        // remove - O(n)
-        public static int remove() {
+            while (!s1.isEmpty()) {
+                s2.push(s1.pop());
+            }
+
+            s1.push(data);
 
             while (!s2.isEmpty()) {
                 s1.push(s2.pop());
             }
+        }
+
+        // remove - O(1)
+        public static int remove() {
+
+            if (s1.isEmpty()) {
+                System.out.println("Queue is empty");
+                return -1;
+            }
 
             return s1.pop();
         }
+
+        // 2. pop(n) --------->
+        // // add - O(1)
+        // public static void add(int data) {
+        //     s2.push(data);
+        // }
+        // // remove - O(n)
+        // public static int remove() {
+        //     while (!s2.isEmpty()) {
+        //         s1.push(s2.pop());
+        //     }
+        //     return s1.pop();
+        // }
 
         public static int peek() {
             if (s1.isEmpty()) {
@@ -64,7 +59,6 @@ public class Q_twoStacks {
             }
             return s1.peek();
         }
-
     }
 
     public static void main(String[] args) {
@@ -74,7 +68,7 @@ public class Q_twoStacks {
         q.add(2);
         q.add(3);
 
-        q.remove();
+        // q.remove();
 
         while (!q.isEmpty()) {
             System.out.println(q.peek());
@@ -82,3 +76,4 @@ public class Q_twoStacks {
         }
     }
 }
+ 
