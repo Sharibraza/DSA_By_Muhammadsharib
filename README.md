@@ -1,8 +1,5 @@
 # DSA_By_Muhammadsharib
 
-[![Repo Size](https://img.shields.io/github/repo-size/Muhammadsharib/DSA_By_Muhammadsharib?style=flat)]()
-[![License](https://img.shields.io/badge/license-MIT-blue?style=flat)]()
-
 A concise, well-organized collection of Data Structures & Algorithms (DSA) implementations and problem solutions designed for learning, practice, and interview preparation.
 
 ---
