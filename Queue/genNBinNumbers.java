@@ -3,7 +3,7 @@ package Queue;
 import java.util.*;
 
 public class genNBinNumbers {
-     public static void genPrintBinNumbers(int n){
+     public static void genPrintBinNumbers(int n){    // TC : O(N) [O(total characters printed)]   SC : O(N)
             Queue<String> q = new LinkedList<String>();
             q.add("1");
 
