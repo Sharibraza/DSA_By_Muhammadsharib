@@ -37,7 +37,7 @@ public class CustomizedSortingOrder {
     }
 
     public static void main(String[] args) {
-        ArrayList<Person> list = new ArrayList<Person>();
+        ArrayList<Person> list = new ArrayList<>();
         list.add(new Person("Aman", 34));
         list.add(new Person("Akbar", 42));
         list.add(new Person("Anthony", 28));
