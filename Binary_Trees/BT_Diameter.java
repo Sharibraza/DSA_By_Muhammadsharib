@@ -1,6 +1,5 @@
 package Binary_Trees;
 
-import Binary_Trees.HeightOfBTree;
 import Binary_Trees.BTree.Node;
 
 public class BT_Diameter {
@@ -22,6 +21,8 @@ public class BT_Diameter {
 
         return Math.max(selfDia, Math.max(leftDia, rightDia));
     }
+
+    // Approach 2 : O(n)
 
     static class Info {
         int diam;
