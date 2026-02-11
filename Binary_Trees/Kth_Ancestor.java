@@ -9,7 +9,7 @@ public class Kth_Ancestor {
         if (root == null ) {
             return -1;
         }
-        if ( root.data == k) {
+        if ( root.data == n) {
             return 0;
         }
 
@@ -39,9 +39,9 @@ public class Kth_Ancestor {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
-        int n = 5, k = 2;
+        int n = 5, k = 1;
 
-        System.out.print(kthAncestor(root, n, k));
+        kthAncestor(root, n, k);
 
         // 1. Compile : javac BTree.java Kth_Ancestor.java
         // 2. Run : java Kth_Ancestor.java
