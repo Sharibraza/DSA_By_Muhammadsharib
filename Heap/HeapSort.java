@@ -25,12 +25,12 @@ public class HeapSort {
         }
     }
 
-    public static void heapSort(int arr[]){
+    public static void heapSort(int arr[]){   // O(2n*logn) --> O(n*logn)
         
         // step1 : arr -> maxheap
         int n = arr.length;
         for (int i = n/2 ; i>=0; i--) {
-            heapify(arr,i,n);
+            heapify(arr,i,n);           // O(n/2 * logn) --> O(n*logn)
         }
 
         // step2 :push first ele at end
@@ -40,7 +40,7 @@ public class HeapSort {
             arr[0] = arr[i];
             arr[i] = temp;
 
-            heapify(arr, 0, i);
+            heapify(arr, 0, i); //O(n*logn)
         }
         
     }
