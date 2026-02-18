@@ -15,7 +15,7 @@ public class HeapSort {
             maxIdx = right ;
         }
 
-        while (maxIdx !=i) {
+        while (maxIdx !=i) {     // [BUG]: if will also work --> In your heapify method, you use a while loop, but because you call heapify recursively inside it, this could lead to infinite recursion or stack overflow. The while loop is not needed here; just an if statement works.
                 //swap
                 int temp = arr[i];
                 arr[i] = arr[maxIdx];
