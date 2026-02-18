@@ -29,11 +29,12 @@ public class Heap {
         return arr.get(0);
     }
 
-    private void heapify(int i) {
+    private void heapify(int i) {  // private bcz it should be only accessed by heapify
         int left = 2 * i + 1;
         int right = 2 * i + 2;
         int minIdx = i;
 
+        // left < arr.size() --> checks for leaf node bcz leaf X has left and right child
         if (left < arr.size() && arr.get(minIdx) > arr.get(left)) {
             minIdx = left;
         }
@@ -48,7 +49,7 @@ public class Heap {
             arr.set(i, arr.get(minIdx));
             arr.set(minIdx, temp);
 
-            heapify(minIdx);
+            heapify(minIdx);  // Recursion stops when no swap is needed.
         }
 
     }
@@ -65,7 +66,7 @@ public class Heap {
         arr.remove(arr.size() - 1);
 
         // check the heap
-        heapify(0);
+        heapify(0); // ---> call for root
 
         return data;
     }
