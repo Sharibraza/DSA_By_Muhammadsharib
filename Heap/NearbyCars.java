@@ -18,7 +18,7 @@ public class NearbyCars {
         @Override
         public int compareTo(Point p2){
             return this.distSq - p2.distSq; //Ascending order
-        }
+        } // distSq hi kyu🤔? --> bcz it refers to distance of car from origin, so jis car ka dist jitna less utni zyada priority ( so we compare there dist to get pq)
     }
     public static void main(String[] args) {
         int pts[][] = {{3,3},{5,-1},{-2,4}};
@@ -35,7 +35,7 @@ public class NearbyCars {
 
 
         for (int i = 0; i < k; i++) {
-            System.out.println("C"+ pq.remove().idx);
+            System.out.print("C"+ pq.remove().idx + " ");
         }
     }
 }
