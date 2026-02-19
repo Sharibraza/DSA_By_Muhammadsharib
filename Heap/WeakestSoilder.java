@@ -40,6 +40,7 @@ public class WeakestSoilder {
             pq.add(new Row(count, i));
         }
 
+
         for (int i = 0; i < k ; i++) {
             // PQ : (1,0), (1,2), (1,3), (4,1).
             System.out.println("R" + pq.remove().idx);
