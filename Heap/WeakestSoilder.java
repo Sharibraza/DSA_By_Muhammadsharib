@@ -14,9 +14,9 @@ public class WeakestSoilder {
         @Override
         public int compareTo(Row r2){
             if(this.soliders == r2.soliders){
-                return this.idx - r2.idx;
+                return this.idx - r2.idx;  // If two rows have the same soliders count, the one with the smaller idx comes first.
             }else{
-                return this.soliders - r2.soliders;
+                return this.soliders - r2.soliders; // Otherwise, the one with the smaller soliders count comes first.
             }
         }
     }
@@ -41,6 +41,7 @@ public class WeakestSoilder {
         }
 
         for (int i = 0; i < k ; i++) {
+            // PQ : (1,0), (1,2), (1,3), (4,1).
             System.out.println("R" + pq.remove().idx);
         }
     }
