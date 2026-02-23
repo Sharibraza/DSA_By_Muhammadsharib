@@ -1,6 +1,7 @@
 package Hashing;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class Hashmap_Implementation {
     
@@ -34,9 +35,16 @@ public class Hashmap_Implementation {
         // isEmpty 
         System.out.println(hm.isEmpty());
 
-        // clear() 
-        hm.clear();
+        // // clear() 
+        // hm.clear();
  
         System.out.println(hm);
+
+        // Teration in Hashmap  - 1.keySet()[ only keys] 2.entrySet() : [keys & val]
+        Set<String> keys = hm.keySet();
+
+        for (String k : keys) {
+            System.out.print("Keys="+k+ ",value="+hm.get(k)); // Keys=Indo,value=40Keys=UAE,value=60Keys=India,value=100
+        }
     }
 }
