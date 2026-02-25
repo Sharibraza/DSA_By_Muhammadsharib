@@ -58,6 +58,8 @@ public class MyHashMap {
             buckets = new LinkedList[N * 2];
             N = 2 * N;
 
+            //List of buckets, if more than 8 entries in bucket then Java 8 will switch to balanced tree from linked list
+            
             for (int i = 0; i < buckets.length; i++) {
                 buckets[i] = new LinkedList<>();
             }
