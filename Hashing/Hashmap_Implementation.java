@@ -44,7 +44,7 @@ public class Hashmap_Implementation {
         Set<String> keys = hm.keySet();
 
         for (String k : keys) {
-            System.out.print("Keys="+k+ ",value="+hm.get(k)); // Keys=Indo,value=40Keys=UAE,value=60Keys=India,value=100
+            System.out.print("["+k+ ","+hm.get(k) + "]"); // [Indo,40][UAE,60][India,100]
         }
     }
 }
