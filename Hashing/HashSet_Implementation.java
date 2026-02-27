@@ -2,6 +2,7 @@ package Hashing;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+import java.util.TreeSet;
 
 public class HashSet_Implementation {
 
@@ -47,6 +48,22 @@ public class HashSet_Implementation {
         lhs.add("UK");
 
         System.out.print("LinkedHashSet : ");
+        for (String val : lhs) {
+            System.out.print(val + " ");
+        }
+
+        System.out.println("");
+
+        // 3. TreeSet
+        TreeSet<String> ts = new TreeSet<>();
+        ts.add("India");
+        ts.add("UAE");
+        ts.add("Indo");
+        ts.add("UK");
+        ts.add("Atlantis");
+        ts.add("Bhutan");
+
+        System.out.print("TreeSet : ");
         for (String val : lhs) {
             System.out.print(val + " ");
         }
