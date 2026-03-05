@@ -49,6 +49,5 @@ public class Trie_Code{
 
         System.out.println(search("thee"));
         System.out.println(search("thor"));
-
     }
 }
