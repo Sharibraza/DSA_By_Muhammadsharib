@@ -47,6 +47,8 @@ public class Trie_Code{
             insert(words[i]);
         }
 
+        System.out.println(search("thee"));
         System.out.println(search("thor"));
+
     }
 }
