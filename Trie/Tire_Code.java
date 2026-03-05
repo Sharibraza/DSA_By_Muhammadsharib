@@ -27,10 +27,26 @@ public class Tire_Code{
 
         curr.endOfWord = true;
     }
+
+    public static boolean search(String key){ //O(L)
+        Node curr = root;
+        for (int level = 0; level < key.length(); level++) {
+            int idx = key.charAt(level) - 'a';
+            if (curr.children[idx] == null) {
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+        return curr.endOfWord == true;
+    }
+
+
     public static void main(String[] args) {
         String words[] = {"the", "a", "there", "their", "any","thee"};
         for (int i = 0; i < words.length; i++) {
             insert(words[i]);
         }
+
+        System.out.println(search("thor"));
     }
 }
