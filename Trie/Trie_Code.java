@@ -1,6 +1,6 @@
 package Trie;
 
-public class Tire_Code{
+public class Trie_Code{
 
     static class Node{
         Node children[] = new Node[26];
