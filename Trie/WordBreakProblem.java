@@ -8,8 +8,7 @@ public class WordBreakProblem {
         }
 
         for (int i = 1; i <= key.length(); i++) {
-            if (Trie_Code.search(key.substring(0, i))
-                    && wordBreak(key.substring(i))) {
+            if (Trie_Code.search(key.substring(0, i)) && wordBreak(key.substring(i))) {
                 return true;
             }
         }
@@ -24,8 +23,8 @@ public class WordBreakProblem {
             Trie_Code.insert(words[i]);
         }
 
-        String key1 = "samsung";
-        String key2 = "phone";
+        String key1 = "ilikesamsung";
+        String key2 = "ihavephone";
 
         System.out.println(wordBreak(key1));
         System.out.println(wordBreak(key2));
