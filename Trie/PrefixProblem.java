@@ -34,7 +34,7 @@ public class PrefixProblem {
         curr.eow = true;
     }
 
-    public static void findPrefix(Node root, String ans) {
+    public static void findPrefix(Node root, String ans) {  // O(L) - levels in Trie == longest word in Trie
 
         if (root == null) {
             return;
@@ -44,7 +44,7 @@ public class PrefixProblem {
             System.out.print(ans + " ");
             return;
         }
-
+                                 // 26
         for (int i = 0; i < root.children.length; i++) {
             if (root.children[i] != null) {
                 findPrefix(root.children[i], ans + (char) (i + 'a'));
@@ -58,7 +58,7 @@ public class PrefixProblem {
             insert(arr[i]);
         }
 
-        root.freq = -1;
+        root.freq = -1;  // root pr hi na ruk jaye bcz by Default root freq is 1, so we set it to -1 to avoid confusion.
 
         findPrefix(root, "");
     }
