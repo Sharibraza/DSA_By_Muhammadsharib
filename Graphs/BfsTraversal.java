@@ -53,7 +53,7 @@ public class BfsTraversal {
         graph[6].add( new Edge(6, 5, 1));
     }
 
-    public static void bfs(ArrayList<Edge> graph[]){        // O(V+E)
+    public static void bfs(ArrayList<Edge> graph[]){     // O(V+E)
         Queue<Integer> q = new LinkedList<>();              
         boolean visited[] = new boolean[graph.length];  // check which vertex is already visited
         q.add(0); // src [ starting point ]
@@ -74,6 +74,14 @@ public class BfsTraversal {
 
     public static void main(String[] args) {
         
+    /*
+           1 --- 3
+          /      | \
+         0       |  5 --- 6
+          \      | /
+           2 --- 4
+    */
+   
         int V = 7; 
 
         ArrayList<Edge> graph[] = new ArrayList[V];  // arr of arrList
