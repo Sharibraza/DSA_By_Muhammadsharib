@@ -27,12 +27,14 @@ also called
 
  *Insert : O(L)  len of largest word
 
- **Prefix problem [ google,micro]
+ **2.Prefix problem [ google,micro]
  ![alt text](image-3.png)
 
 
+Animation : https://1e1e3c11-5a6f-4057-b22a-aa66ec1a5243-00-3qs9xodjtsdga.picard.replit.dev/trie-prefix-walkthrough/
 
- *** Count unique substrings
+
+ *** 3.Count unique substrings
                             ✅
  1. unique substring = all prefixs of all suffix == all suffix of all prefix
  2. Trie stores unique prefix of any string and unique prefix = count of nodes of Trie
