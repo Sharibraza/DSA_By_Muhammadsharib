@@ -81,11 +81,12 @@ public class BfsTraversal {
           \      | /
            2 --- 4
     */
-   
+
         int V = 7; 
 
         ArrayList<Edge> graph[] = new ArrayList[V];  // arr of arrList
         createGraph(graph);
+        System.out.print("BFS : " + "");
         bfs(graph);
     }
 }
