@@ -33,7 +33,7 @@ public class TopologicalSorting {
         graph[5].add(new Edge(5, 2, 1));
     }
 
-    public static void topSort(ArrayList<Edge> graph[]){
+    public static void topSort(ArrayList<Edge> graph[]){  // using dfs
         boolean vis[] = new boolean[graph.length];
         Stack<Integer> s = new Stack<>();
 
