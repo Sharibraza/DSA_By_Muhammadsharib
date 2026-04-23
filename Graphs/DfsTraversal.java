@@ -90,7 +90,7 @@ public class DfsTraversal {
         ArrayList<Edge> graph[] = new ArrayList[V];  // arr of arrList
         createGraph(graph);
         System.out.print("DFS : " + "");
-        dfsUtil(graph, 0, new boolean[V]);
+        dfs(graph);
     }
 }
 
