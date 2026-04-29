@@ -58,6 +58,9 @@ public class DetectCycles {
         return false;
     }
 
+    static int count = 0;
+
+
     public static boolean detectCycleUtil(ArrayList<Edge> graph[], boolean vis[], int curr, int parent){
         vis[curr] = true;
 
@@ -66,11 +69,13 @@ public class DetectCycles {
             //case 3 : 
             if (!vis[e.dest]) {
                 if (detectCycleUtil(graph, vis, e.dest, curr)) {
+                    count++;
                     return true;
                 }
             }
             //case 1 : 
             else if (vis[e.dest] && e.dest != parent) {
+                count++;
                 return true; // always exists
             }
             //case 2 : do nothing --> continue
@@ -93,5 +98,6 @@ public class DetectCycles {
         createGraph(graph);
 
         System.out.print(detectCycle(graph));
+        System.out.println("\n" + count);
     }
 }
