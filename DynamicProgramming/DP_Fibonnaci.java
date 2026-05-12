@@ -10,7 +10,7 @@ public class DP_Fibonnaci {
         }
 
         if (f[n] != 0) {
-            f[n] = fibo1(n - 1, f) + fibo1(n - 2, f);
+            return f[n] = fibo1(n - 1, f) + fibo1(n - 2, f);
         }
 
         return f[n] = fibo1(n - 1, f) + fibo1(n - 2, f);
@@ -35,9 +35,9 @@ public class DP_Fibonnaci {
         int n = 5;
 
         // memoization
-        // int f[] = new int[n + 1]; // 0,0,0....
+        int f[] = new int[n + 1]; // 0,0,0....
 
-        // System.out.println(fibo1(n, f));
-        System.out.println(fibo2(n));
+        System.out.println(fibo1(n, f));
+        // System.out.println(fibo2(n));
     }
 }
